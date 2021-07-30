@@ -15,6 +15,7 @@
 		C2A9ACC526AF3E4E003D3AD8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2A9ACC326AF3E4E003D3AD8 /* LaunchScreen.storyboard */; };
 		C2A9ACD026AF3E4F003D3AD8 /* MarqueeScrollLabelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A9ACCF26AF3E4F003D3AD8 /* MarqueeScrollLabelTests.swift */; };
 		C2A9ACDB26AF3E4F003D3AD8 /* MarqueeScrollLabelUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A9ACDA26AF3E4F003D3AD8 /* MarqueeScrollLabelUITests.swift */; };
+		C2A9ACED26AF3F4A003D3AD8 /* MarqueeScrollLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A9ACEC26AF3F4A003D3AD8 /* MarqueeScrollLabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		C2A9ACD626AF3E4F003D3AD8 /* MarqueeScrollLabelUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarqueeScrollLabelUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2A9ACDA26AF3E4F003D3AD8 /* MarqueeScrollLabelUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarqueeScrollLabelUITests.swift; sourceTree = "<group>"; };
 		C2A9ACDC26AF3E4F003D3AD8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C2A9ACEC26AF3F4A003D3AD8 /* MarqueeScrollLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarqueeScrollLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 		C2A9ACB726AF3E4C003D3AD8 /* MarqueeScrollLabel */ = {
 			isa = PBXGroup;
 			children = (
+				C2A9ACE826AF3ED6003D3AD8 /* View */,
 				C2A9ACB826AF3E4C003D3AD8 /* AppDelegate.swift */,
 				C2A9ACBA26AF3E4C003D3AD8 /* SceneDelegate.swift */,
 				C2A9ACBC26AF3E4C003D3AD8 /* ViewController.swift */,
@@ -126,6 +129,14 @@
 				C2A9ACDC26AF3E4F003D3AD8 /* Info.plist */,
 			);
 			path = MarqueeScrollLabelUITests;
+			sourceTree = "<group>";
+		};
+		C2A9ACE826AF3ED6003D3AD8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C2A9ACEC26AF3F4A003D3AD8 /* MarqueeScrollLabel.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,6 +271,7 @@
 			files = (
 				C2A9ACBD26AF3E4C003D3AD8 /* ViewController.swift in Sources */,
 				C2A9ACB926AF3E4C003D3AD8 /* AppDelegate.swift in Sources */,
+				C2A9ACED26AF3F4A003D3AD8 /* MarqueeScrollLabel.swift in Sources */,
 				C2A9ACBB26AF3E4C003D3AD8 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -439,6 +451,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TKE7M524M9;
 				INFOPLIST_FILE = MarqueeScrollLabel/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -458,6 +471,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TKE7M524M9;
 				INFOPLIST_FILE = MarqueeScrollLabel/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

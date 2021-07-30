@@ -1,24 +1,134 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MarqueeScrollLabel" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A2U-Hx-0lv" customClass="MarqueeScrollLabel" customModule="MarqueeScrollLabel" customModuleProvider="target">
+                                <rect key="frame" x="20" y="104" width="374" height="34"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <color key="textColor" systemColor="systemPinkColor"/>
+                                <color key="highlightedColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="text">
+                                        <string key="value">Test textTest textTest textTest textTest textTest textTest textTest textTest textTest textTest textTest textTest textTest textTest textTest text</string>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="animating" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="enableTextFade" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label without text fade" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8S3-kM-COL" customClass="MarqueeScrollLabel" customModule="MarqueeScrollLabel" customModuleProvider="target">
+                                <rect key="frame" x="20" y="158" width="374" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="text">
+                                        <string key="value">Test textTest textTest textTest textTest textTest textTest textTest textTest textTest textTest textTest textTest textTest textTest textTest text</string>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="animating" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="enableTextFade" value="NO"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Short label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FuE-3V-mRM" customClass="MarqueeScrollLabel" customModule="MarqueeScrollLabel" customModuleProvider="target">
+                                <rect key="frame" x="20" y="199" width="374" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="text" value="Short label"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="animating" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VLx-jK-PDr">
+                                <rect key="frame" x="174" y="300" width="51" height="31"/>
+                                <connections>
+                                    <action selector="toggleAnimation:" destination="BYZ-38-t0r" eventType="valueChanged" id="ITO-TZ-Ms2"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enable animation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aCX-f2-TF7">
+                                <rect key="frame" x="20" y="305" width="130" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Short text" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GUP-Mq-zrn">
+                                <rect key="frame" x="20" y="356" width="76" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i0X-0W-rII">
+                                <rect key="frame" x="174" y="351" width="51" height="31"/>
+                                <connections>
+                                    <action selector="toggleShortText:" destination="BYZ-38-t0r" eventType="valueChanged" id="JHB-78-XYB"/>
+                                </connections>
+                            </switch>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="FuE-3V-mRM" secondAttribute="trailing" constant="20" id="2hl-KX-iRi"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8S3-kM-COL" secondAttribute="trailing" constant="20" id="3yx-2U-CXG"/>
+                            <constraint firstItem="i0X-0W-rII" firstAttribute="centerX" secondItem="VLx-jK-PDr" secondAttribute="centerX" id="4VN-AG-tlV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="A2U-Hx-0lv" secondAttribute="trailing" constant="20" id="8VV-nS-gDW"/>
+                            <constraint firstItem="FuE-3V-mRM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="DUm-PY-7sQ"/>
+                            <constraint firstItem="aCX-f2-TF7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="FM2-gW-bdo"/>
+                            <constraint firstItem="aCX-f2-TF7" firstAttribute="centerY" secondItem="VLx-jK-PDr" secondAttribute="centerY" id="Hwa-GJ-mLC"/>
+                            <constraint firstItem="8S3-kM-COL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="MKR-eF-Dgd"/>
+                            <constraint firstItem="GUP-Mq-zrn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="WGl-DK-LCw"/>
+                            <constraint firstItem="VLx-jK-PDr" firstAttribute="top" secondItem="FuE-3V-mRM" secondAttribute="bottom" constant="80" id="XxE-a7-fNe"/>
+                            <constraint firstItem="GUP-Mq-zrn" firstAttribute="centerY" secondItem="i0X-0W-rII" secondAttribute="centerY" id="Z55-p8-3Sa"/>
+                            <constraint firstItem="i0X-0W-rII" firstAttribute="top" secondItem="VLx-jK-PDr" secondAttribute="bottom" constant="20" id="e7f-5m-jra"/>
+                            <constraint firstItem="FuE-3V-mRM" firstAttribute="top" secondItem="8S3-kM-COL" secondAttribute="bottom" constant="20" id="ka7-vq-LZL"/>
+                            <constraint firstItem="8S3-kM-COL" firstAttribute="top" secondItem="A2U-Hx-0lv" secondAttribute="bottom" constant="20" id="ozK-q5-eHQ"/>
+                            <constraint firstItem="A2U-Hx-0lv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="rIO-PE-H4A"/>
+                            <constraint firstItem="A2U-Hx-0lv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="ybK-EP-eRK"/>
+                            <constraint firstItem="VLx-jK-PDr" firstAttribute="leading" secondItem="aCX-f2-TF7" secondAttribute="trailing" constant="24" id="z0U-7Q-LgN"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="customizedAppearanceLabel" destination="A2U-Hx-0lv" id="EFk-sY-lbi"/>
+                        <outlet property="noTextFadeLabel" destination="8S3-kM-COL" id="1LJ-EH-9SP"/>
+                        <outlet property="shortTextLabel" destination="FuE-3V-mRM" id="1FT-Fj-I9f"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="121.73913043478262" y="103.79464285714285"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="8S3-kM-COL">
+            <size key="intrinsicContentSize" width="1035.5" height="20.5"/>
+        </designable>
+        <designable name="A2U-Hx-0lv">
+            <size key="intrinsicContentSize" width="1603" height="33.5"/>
+        </designable>
+        <designable name="FuE-3V-mRM">
+            <size key="intrinsicContentSize" width="82.5" height="20.5"/>
+        </designable>
+    </designables>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
