@@ -36,6 +36,12 @@ open class MarqueeScrollLabel: UILabel {
         }
     }
 
+    @IBInspectable public var enableTextFadeInset: Bool = true {
+        didSet {
+            setupMarqueeAnimation()
+        }
+    }
+
     private let gradientMask = CAGradientLayer()
 
     private let defaultFont = UIFont.systemFont(ofSize: 17)
@@ -158,7 +164,7 @@ open class MarqueeScrollLabel: UILabel {
             if enableTextFade && animating {
                 gradientMask.frame = layer.bounds
                 layer.mask = gradientMask
-                label.frame = CGRect(x: bounds.width*0.08, y: 0, width: label.intrinsicContentSize.width, height: bounds.height)
+                label.frame = CGRect(x: enableTextFadeInset ? bounds.width*0.08 : 0, y: 0, width: label.intrinsicContentSize.width, height: bounds.height)
             } else {
                 layer.mask = nil
                 label.frame = CGRect(x: 0, y: 0, width: label.intrinsicContentSize.width, height: bounds.height)

@@ -24,9 +24,7 @@
                                 <color key="textColor" systemColor="systemPinkColor"/>
                                 <color key="highlightedColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="text">
-                                        <string key="value">Test textTest textTest textTest textTest textTest textTest textTest textTest textTest textTest textTest textTest textTest textTest textTest text</string>
-                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="text" value="Test textTest textTest textTest textTest textTest textTest textTest textTest textTest "/>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="animating" value="YES"/>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="enableTextFade" value="YES"/>
                                 </userDefinedRuntimeAttributes>
@@ -37,9 +35,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="text">
-                                        <string key="value">Test textTest textTest textTest textTest textTest textTest textTest textTest textTest textTest textTest textTest textTest textTest textTest text</string>
-                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="text" value="Test textTest textTest textTest textTest textTest textTest textTest textTest textTest "/>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="animating" value="YES"/>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="enableTextFade" value="NO"/>
                                 </userDefinedRuntimeAttributes>
@@ -52,6 +48,7 @@
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="text" value="Short label"/>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="animating" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="enableTextFadeInset" value="NO"/>
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VLx-jK-PDr">
@@ -114,10 +111,10 @@
     </scenes>
     <designables>
         <designable name="8S3-kM-COL">
-            <size key="intrinsicContentSize" width="1035.5" height="20.5"/>
+            <size key="intrinsicContentSize" width="618.5" height="20.5"/>
         </designable>
         <designable name="A2U-Hx-0lv">
-            <size key="intrinsicContentSize" width="1603" height="33.5"/>
+            <size key="intrinsicContentSize" width="957.5" height="33.5"/>
         </designable>
         <designable name="FuE-3V-mRM">
             <size key="intrinsicContentSize" width="82.5" height="20.5"/>
